@@ -300,6 +300,48 @@
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .timeline.certifications-timeline {
+    padding-bottom: 0;
+  }
+
+  .timeline.certifications-timeline .certifications-main-line,
+  .timeline.certifications-timeline .certifications-final-dot {
+    display: none;
+  }
+
+  .timeline.certifications-timeline .timeline-item-certification {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 18px;
+    padding: 18px 16px;
+    border: 1px solid rgba(139, 92, 246, 0.22);
+    border-radius: 14px;
+    background: rgba(16, 21, 34, 0.72);
+    backdrop-filter: blur(4px);
+  }
+
+  .timeline.certifications-timeline .timeline-item-certification .timeline-middle {
+    display: none;
+  }
+
+  .timeline.certifications-timeline .timeline-item-certification .timeline-left,
+  .timeline.certifications-timeline .timeline-item-certification .timeline-right {
+    width: 100%;
+    text-align: left;
+  }
+
+  .timeline.certifications-timeline .timeline-item-certification .timeline-right .timeline-meta {
+    margin-top: 8px;
+  }
+
+  .timeline.certifications-timeline .timeline-item-certification:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .career-info {
     margin: 0;
