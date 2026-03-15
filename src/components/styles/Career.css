@@ -55,6 +55,74 @@
   width: 100%;
 }
 
+.training-timeline {
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.training-main-line {
+  position: absolute;
+  top: 0;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgba(139, 92, 246, 0.85),
+    rgba(139, 92, 246, 0.15)
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.training-final-dot {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #a78bfa;
+  box-shadow: 0 0 10px #8b5cf6, 0 0 20px #8b5cf6, 0 0 28px #8b5cf6;
+  z-index: 1;
+}
+
+.education-timeline {
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.education-main-line {
+  position: absolute;
+  top: 0;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgba(139, 92, 246, 0.85),
+    rgba(139, 92, 246, 0.15)
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.education-final-dot {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #a78bfa;
+  box-shadow: 0 0 10px #8b5cf6, 0 0 20px #8b5cf6, 0 0 28px #8b5cf6;
+  z-index: 1;
+}
+
 .certifications-timeline {
   position: relative;
   padding-bottom: 30px;
@@ -128,6 +196,22 @@
   font-weight: 300;
 }
 
+.timeline-right .timeline-bullets {
+  margin: 12px 0 0;
+  padding-left: 18px;
+}
+
+.timeline-right .timeline-bullets li {
+  margin: 0 0 10px;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.55;
+}
+
+.timeline-right .timeline-bullets li:last-child {
+  margin-bottom: 0;
+}
+
 .timeline-right .timeline-meta {
   margin-top: 14px;
   font-size: 13px;
@@ -145,6 +229,18 @@
 }
 
 .timeline-item-certification {
+  position: relative;
+  z-index: 1;
+}
+
+.education-timeline .timeline-item,
+.education-timeline .career-info-box {
+  position: relative;
+  z-index: 1;
+}
+
+.training-timeline .timeline-item,
+.training-timeline .career-info-box {
   position: relative;
   z-index: 1;
 }
@@ -246,6 +342,10 @@
   .timeline-right p {
     font-size: 14px;
   }
+
+  .timeline-right .timeline-bullets li {
+    font-size: 14px;
+  }
 }
 
 @media only screen and (max-width: 1025px) {
@@ -263,7 +363,9 @@
   }
 
   .certifications-main-line,
-  .certifications-final-dot {
+  .certifications-final-dot,
+  .training-main-line,
+  .training-final-dot {
     left: 50%;
   }
 
@@ -301,6 +403,139 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .timeline-section.experience .timeline-item,
+  .timeline-section.experience .career-info-box,
+  .timeline-section.achievements .timeline-item,
+  .timeline-section.achievements .career-info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 18px;
+    padding: 18px 16px;
+    border: 1px solid rgba(139, 92, 246, 0.22);
+    border-radius: 14px;
+    background: rgba(16, 21, 34, 0.72);
+    backdrop-filter: blur(4px);
+  }
+
+  .timeline-section.experience .timeline-item .timeline-middle,
+  .timeline-section.experience .career-info-box .timeline-middle,
+  .timeline-section.achievements .timeline-item .timeline-middle,
+  .timeline-section.achievements .career-info-box .timeline-middle {
+    display: none;
+  }
+
+  .timeline-section.experience .timeline-item .timeline-left,
+  .timeline-section.experience .timeline-item .timeline-right,
+  .timeline-section.experience .career-info-box .timeline-left,
+  .timeline-section.experience .career-info-box .timeline-right,
+  .timeline-section.achievements .timeline-item .timeline-left,
+  .timeline-section.achievements .timeline-item .timeline-right,
+  .timeline-section.achievements .career-info-box .timeline-left,
+  .timeline-section.achievements .career-info-box .timeline-right {
+    width: 100%;
+    text-align: left;
+  }
+
+  .timeline-section.experience .timeline-item .timeline-right .timeline-meta,
+  .timeline-section.experience .career-info-box .timeline-right .timeline-meta,
+  .timeline-section.achievements .timeline-item .timeline-right .timeline-meta,
+  .timeline-section.achievements .career-info-box .timeline-right .timeline-meta {
+    margin-top: 8px;
+  }
+
+  .timeline-section.experience .timeline-item:last-of-type,
+  .timeline-section.experience .career-info-box:last-of-type,
+  .timeline-section.achievements .timeline-item:last-of-type,
+  .timeline-section.achievements .career-info-box:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .timeline.training-timeline {
+    padding-bottom: 0;
+  }
+
+  .timeline.training-timeline .training-main-line,
+  .timeline.training-timeline .training-final-dot,
+  .timeline.training-timeline .timeline-middle {
+    display: none;
+  }
+
+  .timeline.training-timeline .timeline-item,
+  .timeline.training-timeline .career-info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 18px;
+    padding: 18px 16px;
+    border: 1px solid rgba(139, 92, 246, 0.22);
+    border-radius: 14px;
+    background: rgba(16, 21, 34, 0.72);
+    backdrop-filter: blur(4px);
+  }
+
+  .timeline.training-timeline .timeline-item .timeline-left,
+  .timeline.training-timeline .timeline-item .timeline-right,
+  .timeline.training-timeline .career-info-box .timeline-left,
+  .timeline.training-timeline .career-info-box .timeline-right {
+    width: 100%;
+    text-align: left;
+  }
+
+  .timeline.training-timeline .timeline-item .timeline-right .timeline-meta,
+  .timeline.training-timeline .career-info-box .timeline-right .timeline-meta {
+    margin-top: 8px;
+  }
+
+  .timeline.training-timeline .timeline-item:last-of-type,
+  .timeline.training-timeline .career-info-box:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .timeline.education-timeline {
+    padding-bottom: 0;
+  }
+
+  .timeline.education-timeline .education-main-line,
+  .timeline.education-timeline .education-final-dot,
+  .timeline.education-timeline .timeline-middle {
+    display: none;
+  }
+
+  .timeline.education-timeline .timeline-item,
+  .timeline.education-timeline .career-info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 18px;
+    padding: 18px 16px;
+    border: 1px solid rgba(139, 92, 246, 0.22);
+    border-radius: 14px;
+    background: rgba(16, 21, 34, 0.72);
+    backdrop-filter: blur(4px);
+  }
+
+  .timeline.education-timeline .timeline-item .timeline-left,
+  .timeline.education-timeline .timeline-item .timeline-right,
+  .timeline.education-timeline .career-info-box .timeline-left,
+  .timeline.education-timeline .career-info-box .timeline-right {
+    width: 100%;
+    text-align: left;
+  }
+
+  .timeline.education-timeline .timeline-item .timeline-right .timeline-meta,
+  .timeline.education-timeline .career-info-box .timeline-right .timeline-meta {
+    margin-top: 8px;
+  }
+
+  .timeline.education-timeline .timeline-item:last-of-type,
+  .timeline.education-timeline .career-info-box:last-of-type {
+    margin-bottom: 0;
+  }
+
   .timeline.certifications-timeline {
     padding-bottom: 0;
   }
@@ -375,6 +610,10 @@
   }
 
   .timeline-right p {
+    font-size: 13px;
+  }
+
+  .timeline-right .timeline-bullets li {
     font-size: 13px;
   }
 

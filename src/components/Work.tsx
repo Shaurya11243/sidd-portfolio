@@ -16,7 +16,7 @@ const projects = [
     techStack: "HTML, CSS, JavaScript",
     description:
       "Developed a multi-page web application designed to manage sports league information including schedules, player records, and standings. Implemented dynamic client-side functionality to present real-time league information and improve data accessibility.",
-    image: "/images/radix.png",
+    image: "/images/radix.jpeg",
   },
 ];
 
