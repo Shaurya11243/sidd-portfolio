@@ -15,7 +15,6 @@ const About = () => {
           technologies such as C++, Python, Java, HTML, CSS, and JavaScript.
           My projects include chatbot systems and web-based management
           platforms designed to improve usability and data accessibility.
-          
         </p>
         
       </div>
