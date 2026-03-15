@@ -1,0 +1,346 @@
+.career-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 90px 0 20px;
+}
+
+.career-section h2 {
+  font-size: 70px;
+  line-height: 70px;
+  font-weight: 400;
+  text-align: center;
+  background: linear-gradient(0deg, #8b5cf6, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  margin-top: 20px;
+  margin-bottom: 45px;
+}
+
+.career-section h2 > span {
+  font-family: "Geist", sans-serif;
+  font-weight: 300;
+}
+
+.career-info {
+  width: 100%;
+}
+
+.timeline-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 80px auto 0;
+  padding-top: 24px;
+}
+
+.timeline-section:first-child {
+  margin-top: 20px;
+}
+
+.career-group-title {
+  font-size: 22px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 30px;
+  color: var(--accentColor);
+}
+
+.timeline {
+  width: 100%;
+}
+
+.certifications-timeline {
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.certifications-main-line {
+  position: absolute;
+  top: 0;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgba(139, 92, 246, 0.85),
+    rgba(139, 92, 246, 0.15)
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.certifications-final-dot {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #a78bfa;
+  box-shadow: 0 0 10px #8b5cf6, 0 0 20px #8b5cf6, 0 0 28px #8b5cf6;
+  z-index: 1;
+}
+
+.timeline-item,
+.career-info-box {
+  display: grid;
+  grid-template-columns: 1fr 90px 1fr;
+  align-items: center;
+  column-gap: 20px;
+  margin-bottom: 56px;
+  opacity: 0.85;
+  transform: scale(1);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.timeline-item.timeline-item-active,
+.career-info-box.timeline-item-active {
+  opacity: 1;
+  transform: scale(1.015);
+}
+
+.timeline-item:last-of-type,
+.career-info-box:last-of-type {
+  margin-bottom: 8px;
+}
+
+.timeline-left,
+.timeline-right {
+  text-align: left;
+  min-width: 0;
+}
+
+.timeline-right {
+  opacity: 0.9;
+}
+
+.timeline-right p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.timeline-right .timeline-meta {
+  margin-top: 14px;
+  font-size: 13px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--accentColor);
+  opacity: 0.9;
+}
+
+.timeline-middle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-item-certification {
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-line,
+.career-timeline {
+  width: 2px;
+  height: 88px;
+  background: linear-gradient(
+    to bottom,
+    rgba(139, 92, 246, 0.8),
+    rgba(139, 92, 246, 0.15)
+  );
+  position: relative;
+}
+
+.timeline-end-dot {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #a78bfa;
+  box-shadow: 0 0 10px #8b5cf6, 0 0 20px #8b5cf6, 0 0 28px #8b5cf6;
+}
+
+.career-dot {
+  animation: timelineGlow 1.2s ease-in-out infinite alternate;
+}
+
+.career-role h4 {
+  font-size: 33px;
+  line-height: 30px;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.career-role h5 {
+  font-weight: 400;
+  letter-spacing: 0.7px;
+  font-size: 20px;
+  line-height: 1.3;
+  margin: 10px 0 0;
+  color: var(--accentColor);
+}
+
+.timeline-section.achievements {
+  margin-bottom: 0;
+}
+
+.timeline-section.achievements .timeline-item,
+.timeline-section.achievements .career-info-box {
+  margin-bottom: 56px;
+}
+
+.timeline-section.achievements .timeline-item:last-of-type,
+.timeline-section.achievements .career-info-box:last-of-type {
+  margin-bottom: 10px;
+}
+
+@keyframes timelineGlow {
+  0% {
+    box-shadow: 0 0 10px #8b5cf6, 0 0 18px #8b5cf6;
+  }
+
+  100% {
+    box-shadow: 0 0 12px #8b5cf6, 0 0 24px #8b5cf6, 0 0 34px #8b5cf6;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .career-section h2 {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  .timeline-item,
+  .career-info-box {
+    grid-template-columns: 1fr 84px 1fr;
+    column-gap: 18px;
+  }
+
+  .career-role h4 {
+    font-size: 22px;
+    line-height: 24px;
+  }
+
+  .career-role h5 {
+    font-size: 17px;
+  }
+
+  .career-group-title {
+    font-size: 18px;
+  }
+
+  .timeline-right p {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .career-section {
+    padding: 60px 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .timeline-section {
+    margin-top: 50px;
+    padding-top: 10px;
+  }
+
+  .certifications-main-line,
+  .certifications-final-dot {
+    left: 50%;
+  }
+
+  .timeline-item,
+  .career-info-box {
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .timeline-middle {
+    margin: 18px 0;
+  }
+
+  .timeline-left,
+  .timeline-right {
+    text-align: center;
+  }
+
+  .timeline-right .timeline-meta {
+    margin-top: 10px;
+  }
+
+  .career-group-title {
+    margin-bottom: 16px;
+  }
+
+  .career-container {
+    width: calc(100% - 25px);
+  }
+
+  .timeline-section.achievements {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .career-info {
+    margin: 0;
+  }
+
+  .career-section h2 {
+    width: 100%;
+    font-size: 45px;
+    line-height: 45px;
+    margin-top: 0;
+  }
+
+  .timeline-section {
+    margin-top: 40px;
+  }
+
+  .career-section {
+    padding-top: 60px;
+    margin-top: 0;
+    align-items: start;
+    justify-content: left;
+  }
+
+  .career-role h4 {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .career-role h5 {
+    font-size: 15px;
+  }
+
+  .timeline-right p {
+    font-size: 13px;
+  }
+
+  .timeline-right .timeline-meta {
+    font-size: 12px;
+  }
+
+  .timeline-section.achievements {
+    margin-bottom: 10px;
+  }
+}
