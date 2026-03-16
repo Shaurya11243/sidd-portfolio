@@ -42,30 +42,7 @@ const timelineSections: { key: string; title: string; items: TimelineEntry[] }[]
       },
     ],
   },
-  {
-    key: "education",
-    title: "Education",
-    items: [
-      {
-        title: "B.Tech - Computer Science and Engineering",
-        subtitle: "Lovely Professional University - Punjab",
-        year: "Aug 2023 - Present",
-        description: "CGPA: 6.87",
-      },
-      {
-        title: "Intermediate - PCM",
-        subtitle: "Trident Public School - Muzaffarpur, Bihar",
-        year: "Mar 2022 - May 2023",
-        description: "Percentage: 65%",
-      },
-      {
-        title: "Matriculation",
-        subtitle: "St. Joseph School - Sonbhadra, Uttar Pradesh",
-        year: "Mar 2020 - May 2021",
-        description: "Percentage: 80.8%",
-      },
-    ],
-  },
+  
   {
     key: "certifications",
     title: "Certifications",
@@ -106,6 +83,30 @@ const timelineSections: { key: string; title: string; items: TimelineEntry[] }[]
         year: "2025",
         description:
           "Acknowledged by ISRO for submitting an innovative problem-solving idea during the Bharatiya Antariksh Hackathon 2025.",
+      },
+    ],
+  },
+  {
+    key: "education",
+    title: "Education",
+    items: [
+      {
+        title: "B.Tech - Computer Science and Engineering",
+        subtitle: "Lovely Professional University - Punjab",
+        year: "Aug 2023 - Present",
+        description: "CGPA: 6.87",
+      },
+      {
+        title: "Intermediate - PCM",
+        subtitle: "Trident Public School - Muzaffarpur, Bihar",
+        year: "Mar 2022 - May 2023",
+        description: "Percentage: 65%",
+      },
+      {
+        title: "Matriculation",
+        subtitle: "St. Joseph School - Sonbhadra, Uttar Pradesh",
+        year: "Mar 2020 - May 2021",
+        description: "Percentage: 80.8%",
       },
     ],
   },
